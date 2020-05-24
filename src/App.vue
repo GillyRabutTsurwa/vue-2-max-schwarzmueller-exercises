@@ -3,27 +3,19 @@
     <img class="logo" alt="Vue logo" src="./assets/logo.png" />
     <Prompt />
     <hr />
-    <Methods />
-    <Computed />
-    <button @click="clearConsole" class="btn">Clear Console</button>
-    <hr />
-    <h3>Now for the Tasks</h3>
     <Tasks />
+    <button @click="clearConsole" class="btn">Refresh</button>
   </div>
-</template>
+</template> 
 
 <script>
 import Prompt from "./components/Prompt";
-import Methods from "./components/MethodsEg";
-import Computed from "./components/ComputedEg";
 import Tasks from "./components/Tasks";
 
 export default {
   name: "App",
   components: {
     Prompt: Prompt,
-    Methods: Methods,
-    Computed: Computed,
     Tasks: Tasks
   },
   methods: {
