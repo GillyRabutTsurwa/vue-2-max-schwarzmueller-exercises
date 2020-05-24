@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Exercise 2: {{title}}</h1>
+    <h1>Exercise 3: {{title}}</h1>
     <p>
       I am doing these exercises knowing
       <strong>
@@ -8,9 +8,8 @@
       </strong> more about VueJS. Also, I am refreshing my fundamental skills using Vue2, but anything that is not in Vue3, I will skip those altogether for now
     </p>
     <ol>
-      <li>Show an alert when the Button gets clicked</li>
-      <li>Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value)</li>
-      <li>Adjust the example from #2 to only fire if the "key down" is the ENTER key</li>
+      <li>Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it</li>
+      <li>Watch for changes in the "result" and reset the "value" after 5 seconds (hint: setTimeout(..., 5000)</li>
     </ol>
   </div>
 </template>
@@ -20,7 +19,7 @@ export default {
   name: "Prompt",
   data() {
     return {
-      title: "Events"
+      title: "Computed & Watch"
     };
   }
 };
