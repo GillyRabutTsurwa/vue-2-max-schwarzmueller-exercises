@@ -4,6 +4,7 @@
     <Prompt />
     <hr />
     <Tasks />
+    <button v-on:click="refresh" class="btn">Refresh</button>
   </div>
 </template>
 
@@ -16,6 +17,13 @@ export default {
   components: {
     Prompt: Prompt,
     Tasks: Tasks
+  },
+  methods: {
+    refresh() {
+      console.clear();
+      location.reload();
+      return false;
+    }
   }
 };
 </script>
@@ -36,5 +44,26 @@ export default {
   left: 2em;
   width: 3em;
   height: 3em;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: 0.1em solid transparent;
+  font-size: 1.1em;
+  padding: 0.7em 1.1em;
+  margin: 1em;
+  text-transform: uppercase;
+  background-color: #42b883;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.5em;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  color: #42b883;
+  background-color: #fff;
+  border: 0.1em solid #42b883;
 }
 </style>
