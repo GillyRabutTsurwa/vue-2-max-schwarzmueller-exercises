@@ -1,14 +1,16 @@
 <template>
   <div class="hello">
-    <h1>Yo</h1>
+    <h1>Yo, from {{name}}</h1>
   </div>
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
-  props: {
-    msg: String
+  data() {
+    return {
+      name: "Vue"
+    };
   }
 };
 </script>
