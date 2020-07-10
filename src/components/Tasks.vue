@@ -31,14 +31,10 @@
         Values of Input are fetched by
         <strong>two-way data binding</strong>
       </p>
+      <p>For the two below however, we are using <strong>v-model</strong></p>
       <form v-on:submit.prevent="logInfo">
         <input type="text" class="bonus-task__text" placeholder="Fill Your Name" v-model="formName" />
-        <input
-          type="number"
-          class="bonus-task__number"
-          placeholder="Fill Your Age"
-          v-model="formAge"
-        />
+        <input type="number" class="bonus-task__number" placeholder="Fill Your Age" v-model="formAge" />
         <button type="submit" class="btn">Submit Info</button>
       </form>
     </div>
