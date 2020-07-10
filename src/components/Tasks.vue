@@ -26,7 +26,7 @@ export default {
   watch: {
     //NOTE: notice how the name of this function is the same as the value we want to watch over (look up at data)
     value: function() {
-      var vm = this;
+      var vm = this; // just as a reminder. we are declaring this outside and putting it in the variable vm because there is no "this" within arrow functions
       if (vm.value > 30) {
         setTimeout(() => {
           vm.value = 0;
