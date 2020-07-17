@@ -9,10 +9,7 @@
     <div>
       <h4>List of CSS & JS Frameworks</h4>
       <ul>
-        <li
-          v-for="(currentFramework, index) in frameworks"
-          v-bind:key="index"
-        >{{currentFramework}} - {{index + 1}}</li>
+        <li v-for="(currentFramework, index) in frameworks" v-bind:key="index">{{currentFramework}} - {{index + 1}}</li>
       </ul>
     </div>
     <div>
@@ -20,6 +17,25 @@
         <li v-for="(currentValue, propertyName, index) in myObject" v-bind:key="currentValue.id">
           <strong>{{index + 1}}</strong>
           - {{propertyName}}: {{currentValue}}
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <!-- Making lists from our test data object. Looping through our object, not array. Vanilla Javascript's equivalent to  for... in  -->
+        <li v-for="(currentValue, currentProperty, index) in testData" v-bind:key="index">
+          <!-- Here we are checking if the current value of the object is an array. -->
+          <template v-if="Array.isArray(currentValue)">
+            <!-- if it is an array, we loop through that array and print out the values -->
+            <div v-for="(current, index) in currentValue" v-bind:key="index">
+              {{current}}
+            </div>
+          </template>
+          <!-- if not, we are printing out the object's key and corresponding value. -->
+          <!-- NOTE: IMPORTANT: The template tag can be very helpful because these tags do not get rendered in the HTML. They are like placeholder tags.  -->
+          <template v-else>
+            {{currentProperty}}: {{currentValue}}
+          </template>
         </li>
       </ul>
     </div>
